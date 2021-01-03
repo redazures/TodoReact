@@ -37,14 +37,6 @@ Input {
    
   }
 
-  .errorMessage{
-    color:var(--danger);
-    font-size: x-small;
-    font-weight: bold;
-    height: 15px;
-    vertical-align: top;
-}
-
 #loginButton{
     background-color: var(--primary);
     color:var(--white);

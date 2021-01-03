@@ -1,0 +1,9 @@
+@import '../configs/colors.css';
+
+.errorMessage{
+    color:var(--danger);
+    font-size: x-small;
+    font-weight: bold;
+    height: 15px;
+    vertical-align: top;
+}

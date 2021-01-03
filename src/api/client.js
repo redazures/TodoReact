@@ -2,7 +2,8 @@ import { create } from "apisauce"
 
 
 const apiClient = create({
-    baseUrl: "http://dev.rapptrlabs.com/Tests/scripts/user-login.php"
+    baseURL: 'http://dev.rapptrlabs.com/Tests/scripts',
+    headers: {'Content-type': 'multipart/form-data'},
 })
 
 export default apiClient

@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 
 import AuthContext from '../auth/AuthContext'
+
+import '../styles/TodoList.css';
+
 const ToDoList = () => {
     const {setUser} = useContext(AuthContext)
 

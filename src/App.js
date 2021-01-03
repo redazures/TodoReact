@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import React, { useState, useEffect } from 'react'
 
 import './styles/App.css';
 import AuthContext from './auth/AuthContext'
@@ -9,10 +8,21 @@ import TodoList from './pages/TodoList.js'
 function App() {
   
   const [ user, setUser ] = useState(false)
-  console.log(user)
+  const storedUser = localStorage.getItem("user")
+
+  const validUser = () =>{
+    const storedUser = localStorage.getItem("user")
+    if(storedUser) setUser(storedUser)
+  }
+
+  useEffect(()=>{
+    validUser()
+  }, [])
+
+  console.log(user, storedUser)
   return (
     <AuthContext.Provider value={{ user, setUser}}>
-      <div className="App">
+      <div className="app">
         {user ? <TodoList/> : <LoginPage/>}
       </div>
     </AuthContext.Provider>

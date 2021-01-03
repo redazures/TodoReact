@@ -3,32 +3,32 @@ import { Field } from 'react-final-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion } from '@fortawesome/free-solid-svg-icons'
 
-
+import '../styles/IconField.css'
 const capitalize = (string)=>{
     return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
 const IconField = ({ name="Input", type='text', placeholder="Placeholder", icon="question"}) => (
-    <Field name={name} className="fields">
+    <Field name={name} >
         {({input, meta})=>{
             return (
-                <div>
+                <div className='inputsContainer'>
                     <div>
-                        <label htmlFor={name}>{capitalize(name)}</label><br/>
-                        <div 
+                        <label htmlFor={name} className='labels'>{capitalize(name)}</label><br/>
+                        <div className='inputbox'
                             style={meta.error && meta.touched ? {borderStyle:"solid",borderColor:"red"} : {borderStyle:"solid",borderColor:"black"}}
                         >
-                            <FontAwesomeIcon icon={icon ? ["fa",icon] : faQuestion} />
+                            <FontAwesomeIcon className='icon' icon={icon ? ["fa",icon] : faQuestion}/>
                             <input
                                 {...input}
-                                style={{border:0}}
+                                className='IconFieldInput'
                                 type={type}
                                 name={name}
                                 placeholder={placeholder}
                             />
                         </div>
                     </div>
-                    <div>{meta.error && meta.touched && (<span className='errorMessage'>{meta.error}</span>)}</div>
+                    <div className="spaceHolder">{meta.error && meta.touched && (<span className='errorMessage'>{meta.error}</span>)}</div>
                 </div>
             )
         }}

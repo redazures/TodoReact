@@ -1,0 +1,27 @@
+@import '../configs/colors.css';
+
+:root{
+  background-color:var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+}
+
+#header{
+  text-align: center;
+}
+
+Button{
+  width: 100%;
+  padding:7px;
+  font-weight: 900;
+  margin-top:20px;
+  margin-bottom: 5px;
+}

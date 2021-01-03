@@ -2,34 +2,37 @@ import React,{ useContext } from 'react'
 import { Form } from 'react-final-form'
 import { faUser, faLock, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
-
+import axios from 'axios';
 
 import AuthContext from '../auth/AuthContext.js'
 import IconField from '../components/IconField.js'
 import emailValidation from '../configs/emailvalidation'
 import Header from '../components/Header.js'
-import api from '../api/api'
 import '../styles/LoginPage.css';
 
 const onSubmit = values => {
-    const obj ={
-        // email:values.email,
-        // password:values.password
-        email:"test@rapptrlabs.com",
-        password:"1234"
-    }
+    console.log("works", values)
+    var formData = new FormData()
+    formData.append('email', values.email)
+    formData.append('password', values.password)
 
-    const options = {
-        method: 'POST',
+    console.log("works", formData.get("email"), formData.get("password"))
+
+    axios({
+        method: 'post',
+        url: 'http://dev.rapptrlabs.com/Tests/scripts/user-login.php',
         headers: {
-            'content-type': 'application/json',
-            'accept': 'application/json'
+          'Content-type': 'multipart/form-data'
         },
-        body: JSON.stringify(obj)
-    }
-    console.log("works", obj)
-    fetch(api, options).then(rs=>rs.json()).then(data=>console.log(data))
-    console.log("works here", obj)
+        data: formData,
+      }).then(rs=>{
+          console.log(rs)
+      }).catch(err=>{
+          console.log(err)
+      })
+
+    
+    console.log("works here at the bottom")
 }   
 
 const validate = values =>{

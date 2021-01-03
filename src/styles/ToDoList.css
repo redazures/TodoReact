@@ -1,1 +1,13 @@
 @import '../configs/colors.css';
+
+.logout{
+    position:fixed;
+    right:0;
+    top:0;
+    background-color: var(--white);
+    height:30px;
+    margin:15px;
+    width: 70px;
+    color: var(--black);
+    text-align: center;
+}

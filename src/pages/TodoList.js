@@ -2,14 +2,14 @@ import React, { useContext } from 'react'
 
 import AuthContext from '../auth/AuthContext'
 
-import '../styles/TodoList.css';
+import '../styles/ToDoList.css';
 
 const ToDoList = () => {
     const {setUser} = useContext(AuthContext)
 
     const logout = () =>{
         setUser(false)
-        localStorage.removeItem('user')
+        localStorage.clear()
     }
 
     return(

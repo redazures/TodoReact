@@ -8,10 +8,10 @@ import TodoList from './pages/TodoList.js'
 function App() {
   
   const [ user, setUser ] = useState(false)
-  const storedUser = localStorage.getItem("user")
+  const localData = JSON.parse(localStorage.getItem("data") || "[]");
 
   const validUser = () =>{
-    const storedUser = localStorage.getItem("user")
+    const storedUser = localStorage.getItem("data")
     if(storedUser) setUser(storedUser)
   }
 
@@ -19,10 +19,12 @@ function App() {
     validUser()
   }, [])
 
+  console.log("this is app",localData)
+
   return (
     <AuthContext.Provider value={{ user, setUser}}>
       <div className="app">
-        {user ? <TodoList/> : <LoginPage/>}
+        {user ? <TodoList incoming={localData}/> : <LoginPage/>}
       </div>
     </AuthContext.Provider>
   );

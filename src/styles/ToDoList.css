@@ -15,24 +15,48 @@
 #header{
     text-align: center;
     font-size: 35px;
-    background-color: tomato;
     width: 100%;
   }
 
 .insidebox{
     height:50px;
     display:flex;
-    background-color: turquoise;
     width:100%;
     align-items: center;
     justify-content: space-between;
+    border-bottom: solid;
 }
 
-#searchBar{
+#searchInsideBox{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: solid;
+}
+
+#searchbar{
     border-style: solid;
     border-color: var(--black);
     height:30px;
     margin:15px;
+    border-radius: 20px;
+}
+
+.searchInput{
+    width: 90%;
+    background-color:var(--white);
+    border-radius: 5px;
+}
+
+#activitybar{
+    border-style: solid;
+    border-color: var(--black);
+    height:30px;
+    margin:15px;
+    width: 170px;
+}
+
+.activityInput{
+    width: 100%;
 }
 
 .toggle {
@@ -40,12 +64,44 @@
     height:30px;
     margin:15px;
     width: 60px;
-    color: var(--black);
+    max-width: 60px;
+    min-width: 60px;
+    color: var(--white);
     text-align: center;
     vertical-align: center;
 }
 
+#save{
+    background-color:var(--black);
+}
+
 .listContainer{
     height: calc(80vh - 50px);
-    background-color: violet;
+    overflow-y: auto;
+}
+
+#listContainerShort{
+    height: calc(80vh - 100px);
+}
+
+.border{
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.activity{
+    margin-left: 10px;
+}
+
+.iconbox{
+    margin-right:10px;
+    height:100%;
+    width:100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon{
+    width:50px
 }

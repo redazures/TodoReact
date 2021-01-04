@@ -1,9 +1,20 @@
 @import '../configs/colors.css';
 
+.loginpage{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+}
+
 .errorMessage{
     color:var(--danger);
     font-size: x-small;
     font-weight: bold;
     height: 15px;
     vertical-align: top;
+}
+
+#header{
+    font-size: 30px;
+    background-color: var(--white);
 }

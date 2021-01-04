@@ -19,7 +19,6 @@ function App() {
     validUser()
   }, [])
 
-  console.log(user, storedUser)
   return (
     <AuthContext.Provider value={{ user, setUser}}>
       <div className="app">

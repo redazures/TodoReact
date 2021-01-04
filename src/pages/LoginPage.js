@@ -46,7 +46,7 @@ const LoginPage = () => {
     }   
 
   return(
-    <>
+    <div className='loginpage'>
       <Header>Rappter Labs</Header>
       <Form 
         onSubmit={handleSubmit}
@@ -62,7 +62,7 @@ const LoginPage = () => {
           </form>
         )}
       </Form>
-    </>
+    </div>
   )
 }
 

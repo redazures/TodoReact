@@ -11,3 +11,41 @@
     color: var(--black);
     text-align: center;
 }
+
+#header{
+    text-align: center;
+    font-size: 35px;
+    background-color: tomato;
+    width: 100%;
+  }
+
+.insidebox{
+    height:50px;
+    display:flex;
+    background-color: turquoise;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchBar{
+    border-style: solid;
+    border-color: var(--black);
+    height:30px;
+    margin:15px;
+}
+
+.toggle {
+    background-color: var(--primary);
+    height:30px;
+    margin:15px;
+    width: 60px;
+    color: var(--black);
+    text-align: center;
+    vertical-align: center;
+}
+
+.listContainer{
+    height: calc(80vh - 50px);
+    background-color: violet;
+}

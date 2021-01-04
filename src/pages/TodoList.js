@@ -36,12 +36,10 @@ const ToDoList = ({ incoming }) => {
         const el = toDo.find(el=>el.key===obj.key)
         el.activity=obj.activity
         const newArray=[...toDo]
-        console.log(newArray)
         setToDo(newArray)
     }
     
     const deleteHandler = id =>{
-        console.log("delete", id)
         const newArr=toDo.filter(el=>el.key!==id)
         setToDo(newArr)
     }
@@ -59,7 +57,7 @@ const ToDoList = ({ incoming }) => {
             </Activity>
             )
     }
-    console.log(toDo)
+
     return(
         <div>
             <Header>To Do List</Header>

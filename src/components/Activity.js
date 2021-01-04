@@ -6,7 +6,6 @@ const Activity = ({ children, editHandler, deleteHandler, id})=>{
     const [ select, setSelect ]= useState(false)
     const [ activity, setActivity ] = useState("")
 
-    console.log(activity)
     return(
         <div className='insidebox'>
             { select 

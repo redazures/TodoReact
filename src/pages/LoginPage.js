@@ -47,7 +47,7 @@ const LoginPage = () => {
 
   return(
     <div className='loginpage'>
-      <Header>Rapptr Labs</Header>
+      <Header>Jammie's Wu's Login Page</Header>
       <Form 
         onSubmit={handleSubmit}
         validate={validate}
